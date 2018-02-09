@@ -1,11 +1,12 @@
 <header>
   <img src="assets/logo.png" alt="">
-  <input type="text">
-  <button>OK</button>
+  <input type="text" [(ngModel)]="entrada" maxlength="35" (keydown.enter)="inserir()">
+  <button class="ok" (click)="inserir()">OK</button>
+  <button (click)="limpar()">Limpar</button>
 </header>
 
 <section>
-  <app-atividade></app-atividade>
-  <app-atividade></app-atividade>
-  <app-atividade></app-atividade>
+  <app-atividade *ngFor="let atividade of atividades" texto="{{atividade}}">
+
+  </app-atividade>
 </section>

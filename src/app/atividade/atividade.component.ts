@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-atividade',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./atividade.component.scss']
 })
 export class AtividadeComponent implements OnInit {
+  @Input() texto;
 
   constructor() { }
 
